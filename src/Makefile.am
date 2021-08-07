@@ -527,7 +527,7 @@ lighttpd_SOURCES = \
   mod_usertrack.c \
   mod_vhostdb.c \
   mod_webdav.c
-lighttpd_CPPFLAGS = \
+lighttpd_CPPFLAGS = \$(FAM_CFLAGS) $(LIBEV_CFLAGS) \
   -DLIGHTTPD_STATIC \
   $(XML_CFLAGS) $(SQLITE_CFLAGS) \
   $(FAM_CFLAGS) $(LIBEV_CFLAGS) $(LIBUNWIND_CFLAGS)
